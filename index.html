@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>VEEV ONE Speciální Edice Odměna</title>
+    <!-- Removed Poppins, Added Inter and Noto Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        /* Added styles from provided example */
+        ReadMsgBody{
+          width: 100%;
+        }
+        .ExternalClass {
+          width: 100%;
+        }
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+          line-height: 100%;
+        }
+        body {
+            /* Updated font-family and added text-size-adjust */
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            margin:0 !important;
+            font-family:'Inter', sans-serif !important;
+            background-color: #FFFFFF;
+            color: #301C5E;
+            box-sizing: border-box;
+        }
+        p {
+          /* Ensure paragraphs also use Inter */
+          margin: 1em 0;
+          font-family:'Inter', sans-serif !important;
+        }
+        table td {
+          /* Ensure table cells also use Inter */
+          border-collapse: collapse;
+          font-family:'Inter', sans-serif !important;
+        }
+        img {
+          outline:0;
+        }
+        a img {
+          border:none;
+        }
+        @-ms-viewport{
+          width: device-width;
+          font-family:'Inter', sans-serif !important;
+        }
+
+        /* Existing styles adapted for Inter font */
+        *, *::before, *::after {
+            box-sizing: inherit;
+            font-family: inherit; /* Ensure all elements inherit the body font */
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto 40px;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+            color: #301C5E;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 0;
+            font-weight: 400; /* Keep normal weight for the p itself */
+            color: #301C5E;
+        }
+        header p strong {
+            font-weight: 700; /* Make only the text inside strong bold */
+        }
+
+        .card {
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+            outline: 2px solid #FFFFFF;
+            outline-offset: -2px;
+        }
+
+        .card h2 {
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700; /* Use Inter bold */
+        }
+
+        .card p {
+            /* Paragraph styles adjusted */
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+             /* Removed redundant font-family here, will inherit from body */
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card strong {
+            font-weight: 700; /* Use Inter bold */
+        }
+
+        .card-dark-blue {
+            background-image: linear-gradient(135deg, #221551, #005c7e);
+            color: #FFFFFF;
+            display: flex;
+            gap: 30px;
+            padding-right: 200px;
+            position: relative;
+            overflow: visible;
+            min-height: 280px;
+        }
+
+        .card-dark-blue .content {
+             flex: 1;
+             position: relative;
+             z-index: 2;
+        }
+
+        .card-dark-blue .image-container {
+            position: absolute;
+            top: -35px;
+            right: 15px;
+            width: 220px;
+            z-index: 3;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .card-dark-blue .veev-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: filter 0.4s ease;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .card-medium-blue {
+            background-image: linear-gradient(135deg, #4A8BC4, #3478B4);
+            color: #FFFFFF;
+        }
+
+        .card-orange {
+            background-image: linear-gradient(135deg, #FFA540, #F58220);
+            color: #FFFFFF;
+            margin-bottom: 0;
+        }
+
+        .cards-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cards-row .card {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        footer p {
+            line-height: 1.5;
+            font-size: inherit;
+             /* Ensure footer p uses Inter */
+            font-family:'Inter', sans-serif !important;
+        }
+
+        footer a {
+            color: #301C5E;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg);
+            transition: left 0.6s ease;
+            z-index: 1;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .card:hover::before {
+            left: 120%;
+        }
+
+        .card-dark-blue:hover .image-container {
+             transform: scale(1.05) rotate(5deg);
+        }
+        .card-dark-blue:hover .veev-image {
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.30));
+        }
+
+        .card h2, .card p {
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 40px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .card {
+                 outline-offset: -2px;
+                 padding: 25px;
+            }
+            .card h2 {
+                font-size: 1.5em;
+            }
+            .card p {
+                font-size: 0.9em;
+            }
+
+            .card-dark-blue {
+                padding: 25px;
+                padding-right: 140px;
+                min-height: unset;
+                gap: 15px;
+            }
+            .card-dark-blue .content {
+                 width: auto;
+                 margin-bottom: 0;
+            }
+             .card-dark-blue .image-container {
+                 top: -20px;
+                 right: 5px;
+                 width: 140px;
+             }
+             .card-dark-blue:hover .image-container {
+                  transform: scale(1.05) rotate(3deg);
+             }
+             .card-dark-blue .veev-image {
+                 filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+             }
+              .card-dark-blue:hover .veev-image {
+                  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+             }
+
+            .cards-row {
+                flex-direction: column;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+             .cards-row .card {
+                margin-bottom: 0;
+            }
+            .card:hover {
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+            }
+        }
+
+         @media (max-width: 480px) {
+             .container {
+                 padding: 0 15px;
+                 margin: 20px auto;
+             }
+             header h1 {
+                 font-size: 1.8em;
+             }
+             .card {
+                 padding: 20px;
+                  outline-offset: -2px;
+             }
+             .card h2 {
+                 font-size: 1.3em;
+             }
+
+             .card-dark-blue {
+                 padding: 20px;
+                 padding-right: 105px;
+                 gap: 10px;
+             }
+              .card-dark-blue .content {
+                  margin-bottom: 0;
+             }
+             .card-dark-blue .image-container {
+                width: 100px;
+                top: -15px;
+                right: 5px;
+            }
+             .card-dark-blue:hover .image-container {
+                  transform: scale(1.05) rotate(3deg);
+             }
+             .card:hover {
+                box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+            }
+         }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Získej zařízení VEEV ONE v speciální designové edici jako mimořádnou odměnu za doporučení.</h1>
+            <p><strong>Standardní odměna je samozřejmostí.</strong></p>
+        </header>
+
+        <section class="card card-dark-blue">
+            <div class="image-container">
+                <img src="https://i.ibb.co/nNF9fWmt/VEEV-devices.png" alt="VEEV ONE Devices" class="veev-image">
+            </div>
+            <div class="content">
+                <h2>Co proto udělat?</h2>
+                <p>Doporuč VEEV ONE od <strong>22. 4. 2025 do 31. 5. 2025</strong> svému známému, dospělého kuřákovi nebo uživateli jiných e-cigaret. Pokud si Tvůj známý koupí registrační sadu VEEV ONE s Tvým <strong>kódem na doporučení</strong>, získáš od nás <strong>voucher na pořízení zařízení VEEV ONE Limited Edition</strong>, který můžeš využít pouze jednou.</p>
+                <p>Pokud úspěšně doporučíš zařízení VEEV ONE, získáš samozřejmě také <strong>standardní odměnu</strong>, tj. voucher v hodnotě <strong>100 Kč</strong>, v případě, že jde o 5. nebo 10. doporučení, získáš voucher v hodnotě <strong>400 Kč</strong>.</p>
+                <p>Tato promo akce se koná v rámci České republiky. Započítávají se do ní <strong>pouze úspěšná doporučení VEEV ONE</strong>, nikoliv doporučení ostatních zařízení.</p>
+            </div>
+        </section>
+
+        <section class="cards-row">
+            <article class="card card-medium-blue">
+                <h2>Jak se o získání mimořádné odměny dozvíš?</h2>
+                <p>Pro obdržení a čerpání odměn musíš mít na svém IQOS účtu <strong>zapnutý souhlas s komunikací</strong> a Tvé <strong>telefonní číslo musí být ve formátu českého čísla tj. +420</strong>. Jinak Tě nebudeme moci kontaktovat a garantovat odměnu.</p>
+            </article>
+
+            <article class="card card-medium-blue">
+                 <h2>Jak se k získané mimořádné odměně dostaneš?</h2>
+                <p>Voucher na pořízení zařízení Ti odešleme prostřednictvím <strong>SMS či e-mailem do 15. 6. 2025</strong>. Můžeš ho využít na <strong>www.IQOS.cz</strong>, v <strong>IQOS prodejnách</strong> a <strong>partnerských prodejnách</strong>. Voucher na pořízení zařízení je <strong>platný do 23. 6. 2025</strong>.</p>
+            </article>
+        </section>
+
+        <section class="card card-orange">
+            <h2>Nezapomeň, že...</h2>
+            <p>Stále platí, že <strong>maximální limit všech doporučení je 10</strong>. To znamená, doporučení z minulosti, doporučení během akce a doporučení po akci se započítávají, přičemž celkově nesmí přesáhnout 10 doporučení.</p>
+        </section>
+
+        <footer>
+            <p>Provozovatel si vyhrazuje <strong>právo kdykoliv změnit podmínky akce</strong>. <strong>Počet odměn</strong> v podobě voucheru na zařízení VEEV ONE LE <strong>je omezen</strong>. Změna podmínek je platná ode dne jejího zveřejnění na internetové stránce <a href="https://www.iqos.com" target="_blank">www.IQOS.com</a>.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
